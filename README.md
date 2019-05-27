@@ -1,6 +1,6 @@
 [link to repository](link)
 
-###Nyan Cat Creation
+### Nyan Cat Creation
 This project is an assignment to learn JavaScript. It's just the beginning. I was assigned an exercise to create a page with Nyan Cat with different objectives:
 1. Create a button
 2. When you click the button, it should start raining Nyan Cats (Nyan cat images falling down over 45 degrees, top left to bottom right, start with one)
