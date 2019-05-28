@@ -9,10 +9,8 @@
     /* display: none; */
     height: 100px;
     width: auto;
+    position: absolute;
 }
 .container {
     position: relative;
-}
-.animation {
-    position: absolute;
 }
