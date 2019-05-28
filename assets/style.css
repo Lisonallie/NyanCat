@@ -6,7 +6,7 @@
   margin-left: -50px;
 }
 #cat {
-    /* display: none; */
+    display: block;
     height: 100px;
     width: auto;
     position: absolute;

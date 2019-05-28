@@ -1,5 +1,15 @@
-document.getElementById("Nyan").addEventListener('click', nyanRain, hideShow);
+window.onload = function() {
+    document.getElementById('cat').style.display = 'none';
+  };
 
+
+document.getElementById("Nyan").addEventListener('click', hideShow);
+function hideShow() {
+    document.getElementById("cat").style.display = "block";
+}
+
+
+document.getElementById("Nyan").addEventListener('click', nyanRain);
 function nyanRain() {
     var elem = document.getElementById("cat");
     var pos = -100;
@@ -15,7 +25,5 @@ function nyanRain() {
     }
 }
 function hideShow() {
-    if (document.getElementById("cat").style.display === "none") {
         document.getElementById("cat").style.display = "block";
-    }
 }
