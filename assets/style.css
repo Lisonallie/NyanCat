@@ -1,4 +1,4 @@
-#nyan {
+#Nyan {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -6,7 +6,9 @@
   margin-left: -50px;
 }
 #cat {
-    display: none;
+    /* display: none; */
+    height: 100px;
+    width: auto;
 }
 .container {
     position: relative;

@@ -1,8 +1,8 @@
-document.getElementById("Nyan").addEventListener('click', 'nyanRain');
+document.getElementById("Nyan").addEventListener('click', nyanRain);
 
 function nyanRain() {
-    var elem = document.getElementById("cat").style.display === "block"
-    var pos = 0;
+    var elem = document.getElementById("cat");
+    var pos = -100;
     var id = setInterval(frame, 10);
     function frame() {
         if (pos == 350) {
@@ -15,10 +15,10 @@ function nyanRain() {
     }
 }
 
-document.getElementById("cat").addEventListener('onload', 'hideShow');
+document.getElementById("cat").addEventListener('onload', hideShow);
 
 function hideShow() {
-    if (document.getElementById("cat").style.display === "block") {
-        document.getElementById("cat").style.display = "none";
+    if (document.getElementById("cat").style.display === "none") {
+        document.getElementById("cat").style.display = "block";
     }
 }
