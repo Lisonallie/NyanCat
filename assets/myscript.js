@@ -1,6 +1,6 @@
-window.onload = function() {
+window.onload = function () {
     document.getElementById('cat').style.display = 'none';
-  };
+};
 
 
 document.getElementById("Nyan").addEventListener('click', hideShow);
@@ -15,7 +15,7 @@ function nyanRain() {
     var pos = -100;
     var id = setInterval(frame, 10);
     function frame() {
-        if (pos == 700) {
+        if (pos == 640) {
             clearInterval(id);
         } else {
             pos++;
@@ -25,5 +25,5 @@ function nyanRain() {
     }
 }
 function hideShow() {
-        document.getElementById("cat").style.display = "block";
+    document.getElementById("cat").style.display = "block";
 }
