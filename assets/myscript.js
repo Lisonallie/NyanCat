@@ -4,15 +4,14 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var context = canvas.getContext("2d");
 var img = new Image();
-img.src = "../NyanCat/assets/nyan.jpg";
+img.src = "../NyanCat/assets/nyan.png";
 var RandomNyans = getRandomInt(50);
 var NyanCats = [];
 var x = 0;
 var y = 0;
 for (let i = 0; i < RandomNyans; i++) {
     var randomx = getRandomInt(canvas.width);
-    var NyanCat = img.src;
-    NyanCats[i] = new NyanCat(randomx, y);
+    NyanCats[i] = new Nyan(randomx, y);
 }
 
 function getRandomInt(max) {
@@ -23,40 +22,32 @@ function Nyan(x, y) {
     this.x = x;
     this.y = y;
     this.show = function () {
-        context.drawImage(img, this.x, this.y, 200, 200);
+        context.drawImage(img, this.x, this.y, 50, 50);
     }
     this.fall = function (speed) {
         this.speed = speed;
         this.y += this.speed;
         this.x += this.speed;
-        if (this.y > canvas.height || this.x > canvas.width) {
+        if (this.y > canvas.height || RandomNyans.x > canvas.width) {
             this.y = 0;
             var randomx = getRandomInt(canvas.width);
             this.x = randomx;
         }
-
-        this.fall = function () {
-            var dir = Math.floor(Math.random() * 5);
-            if (dir == 0) {
-                this.x = this.x;
-            }
+        var dir = Math.floor(Math.random() * 5);
+        if (dir == 0) {
+            this.x = this.x;
+        }
+        if (dir == 1) {
+            this.x = this.x - 1;
+        }
+        if (dir == 2) {
+            this.x = this.x - 2;
+        }
+        if (dir == 3) {
             this.x = this.x + 1;
-            this.y = this.y + 1;
-            if (this.y > canvas.height) {
-                this.y = 0;
-            }
-            if (dir == 1) {
-                this.x = this.x - 1;
-            }
-            if (dir == 2) {
-                this.x = this.x - 2;
-            }
-            if (dir == 3) {
-                this.x = this.x + 1;
-            }
-            if (dir == 4) {
-                this.x = this.x + 2;
-            }
+        }
+        if (dir == 4) {
+            this.x = this.x + 2;
         }
     }
 }
