@@ -1,4 +1,4 @@
-[link to repository](link)
+[Come click Nyan Cat!](https://lisonallie.github.io/NyanCat/)
 
 ### Nyan Cat Creation
 This project is an assignment to learn JavaScript. It's just the beginning. I was assigned an exercise to create a page with Nyan Cat with different objectives:
