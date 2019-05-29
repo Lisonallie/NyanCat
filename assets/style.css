@@ -18,6 +18,9 @@ button{
     color: rgb(190, 96, 112);
     box-shadow: none;
     font-size: 20px;
+    border-color: rgb(255, 214, 79);
+    border-image: none;
+    border-style: double;
 }
 button:hover{
     padding: 15px 25px;
