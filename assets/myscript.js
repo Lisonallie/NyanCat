@@ -80,21 +80,13 @@ function update() {
 function start() {
     button.style.display = 'block';
     canvas.style.display = 'none';
+    audio.pause();
 }
+
 function clicky() {
     update();
     audio.play();
     button.style.display = 'none';
     canvas.style.display = 'block';
-    setTimeout(start, 10000);
-}
-
-function play(){
-    if (audio.currentTime > 10) {
-        window.onload(audio.pause());
-    }
-    else {
-        audio.play();
-        setTimeout(10000);
-    }
+    setTimeout(start, 15000);
 }
