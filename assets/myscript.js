@@ -1,16 +1,23 @@
 var canvas = document.getElementById("canvas");
-canvas.width = canvas.innerWidth;
-canvas.height = canvas.innerHeight;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 var context = canvas.getContext("2d");
+var background = new Image();
+background.src = "nyanbg.jpg";
 
 
 function draw() {
-    var background = new Image();
-    background.src = "nyanbg.jpg";
-background.onload = function () {
-    ctx.drawImage(0, 0, canvas.width, canvas.height);
+    background.onload = function () {
+        ctx.drawImage(0, 0, canvas.width, canvas.height);
+    }
 }
 
+function update () {
+    draw();
+    window.requestAnimationFrame(update);
+}
+
+update();
 
 // window.onload = function () {
 //     document.getElementById('cat').style.display = 'none';
