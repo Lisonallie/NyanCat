@@ -5,10 +5,6 @@
   margin-top: -50px;
   margin-left: -50px;
 }
-canvas {
-    background-image: url('nyanbg.jpg');
-    background-size: cover;
-}
 html {
     overflow: hidden;
     margin: 0;
