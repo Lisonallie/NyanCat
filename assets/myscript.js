@@ -77,7 +77,7 @@ function update() {
     window.requestAnimationFrame(update);
 }
 
-function start() {
+function stop() {
     button.style.display = 'block';
     canvas.style.display = 'none';
     audio.pause();
@@ -88,5 +88,5 @@ function clicky() {
     audio.play();
     button.style.display = 'none';
     canvas.style.display = 'block';
-    setTimeout(start, 15000);
+    setTimeout(stop, 15000);
 }
