@@ -2,17 +2,36 @@ var canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var context = canvas.getContext("2d");
-var background = new Image();
-background.src = "nyanbg.jpg";
+var image = new Image();
+image.src = "https://t5.rbxcdn.com/94c4cc2c59fbe7e2941577b8f4570698";
+var amountCats = 50;
+var cat = [];
+for(var i=0; i < amountCats; i++){
+var x = Math.random()*canvas.width;
+var y = Math.random()*canvas.height;
+    cat[i] = new Cat(x,y);
+}
 
 
-function draw() {
-    background.onload = function () {
-        ctx.drawImage(0, 0, canvas.width, canvas.height);
+function Nyan(x, y) {
+    this.x = x;
+    this.y = y;
+    this.show = function () {
+        context.drawImage(image, this.x, this.y, 200, 100);
     }
 }
 
-function update () {
+function draw() {
+    var background = new Image();
+    background.src = "../NyanCat/assets/nyanbg.jpg";
+
+    background.onload = function () {
+        context.drawImage(background, 0, 0, canvas.width, canvas.height);
+    
+    }
+}
+
+function update() {
     draw();
     window.requestAnimationFrame(update);
 }
