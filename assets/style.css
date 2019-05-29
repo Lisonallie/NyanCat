@@ -1,7 +1,7 @@
 #Nyan {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 48%;
   margin-top: -50px;
   margin-left: -50px;
 }
@@ -11,4 +11,15 @@ html {
 }
 body{
     margin: 0;
+}
+button{
+    padding: 10px 20px;
+    background-color: rgb(245, 245, 163);
+    color: rgb(190, 96, 112);
+    box-shadow: none;
+    font-size: 20px;
+}
+button:hover{
+    padding: 15px 25px;
+    cursor: pointer;
 }
